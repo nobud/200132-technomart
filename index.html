@@ -11,29 +11,11 @@
           <div class="logo">
             <h1>Техномарт</h1>
           </div>
-          <form class="search-form" action="/search/" method="get">
-            <label for="id-search">Поиск:</label>
-            <button type="submit"></button>
-            <input id ="id-search" type="text">
-          </form>
+          <input class ="search" type="text" placeholder="Поиск:">
           <ul class="additional-menu">
-            <li>
-              <a href="bookmarks.html">
-                <span class="bookmarks-title">Закладки: </span>
-                <span class="bookmarks-count" >0</span>
-              </a>
-            </li>
-            <li>
-              <a href="cart.html">
-                <span class="cart-title">Корзина: </span>
-                <span class="cart-count" >0</span>
-              </a>
-            </li>
-            <li>
-              <a href="order.html">
-                Оформить заказ
-              </a>
-            </li>
+            <li><a href="bookmarks.html">Закладки: 0</a></li>
+            <li><a href="cart.html">Корзина: 0</a></li>
+            <li><a href="order.html">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
@@ -56,41 +38,17 @@
                 <a class="btn btn-user-block btn-login" href="login.html">Войти</a>
                 <a class="btn btn-user-block btn-registration" href="registration.html">Регистрация</a>
               </div>
-              <div class="user-block-sign-in">
-                <div class="btn btn-user-block btn-user">
-                  <a class="user-profile" href="user-profile.html">Равшан Джамшутович</a>
-                  <a class="user-sign-out" href="user-sign-out.html">Выйти</a>
-                </div>
-                <div class="user-info">
-                  <a class="my-orders" href="my-orders.html">Мои заказы</a>
-                  <a class="user-management" href="user-management.html">Личный кабинет</a>
-                </div>
-              </div>
             </div>
           </div>
           <nav class="main-navigation">
             <ul>
-              <li>
-                <a>Главная</a>
-              </li>
-              <li>
-                <a href="#">Компания</a>
-              </li>
-              <li>
-                <a href="#">Каталог</a>
-              </li>
-              <li>
-                <a href="#">Новости</a>
-              </li>
-              <li>
-                <a href="#">Спецпредложения</a>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
+              <li><a>Главная</a></li>
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -111,7 +69,8 @@
           <a class="btn btn-promo" href="#">для стройки</a>
         </section>
         <section class="promo-item promo-slider">
-          <button class="promo-slider-prev"></button>
+          <label for="btn-promo-1"></label>
+          <label for="btn-promo-2"></label>
           <button class="promo-slider-next"></button>
           <input type="radio" id="btn-promo-1" name="toggle" checked>
           <input type="radio" id="btn-promo-2" name="toggle">
@@ -122,17 +81,17 @@
           <div class="promo-slides">
             <div class="promo-slide">
               <div class="slide-text">
-                <div class="promo-slide-title">Перфораторы</div>
+                <h3 class="promo-slide-title">Перфораторы</h3>
                 <p class="promo-slide-info">Настоящие мужские игрушки</p>
-                <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
               </div>
+              <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="promo-slide">
               <div class="slide-text">
-                <div class="promo-slide-title">Дрели</div>
+                <h3 class="promo-slide-title">Дрели</h3>
                 <p class="promo-slide-info">Соседям на радость</p>
-                <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
               </div>
+              <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </section>
@@ -232,46 +191,30 @@
           <a class="btn btn-producers-all" href="#">все производители</a>
         </div>
         <div class="producers-list">
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/bosh.jpg" width="100" height="100" alt="BOSH">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/makita.jpg" width="100" height="100" alt="makita">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/dewalt.jpg" width="100" height="100" alt="DeWALT">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/interscol.jpg" width="100" height="100" alt="Интерскол">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/hitachi.jpg" width="100" height="100" alt="HITACHI">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/lg.jpg" width="100" height="100" alt="LG">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/aeg.jpg" width="100" height="100" alt="AEG Power Solutions">
-            </a>
-          </div>
-          <div class="producers-list-item">
-            <a href="#">
-              <img src="img/metabo.jpg" width="100" height="100" alt="metabo">
-            </a>
-          </div>
+          <a class="producer" href="#">
+            <img src="img/bosh.jpg" width="100" height="100" alt="BOSH">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/makita.jpg" width="100" height="100" alt="makita">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/dewalt.jpg" width="100" height="100" alt="DeWALT">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/interscol.jpg" width="100" height="100" alt="Интерскол">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/hitachi.jpg" width="100" height="100" alt="HITACHI">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/lg.jpg" width="100" height="100" alt="LG">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/aeg.jpg" width="100" height="100" alt="AEG Power Solutions">
+          </a>
+          <a class="producer" href="#">
+            <img src="img/metabo.jpg" width="100" height="100" alt="metabo">
+          </a>
         </div>
       </section>
       <section class="services">
@@ -291,43 +234,31 @@
           </div>
           <div class="services-slides">
             <div class="services-slide">
-              <div class="services-slide-text">
-                <p class="services-slide-title">
-                  Доставка
-                </p>
-                <p class="services-slide-description">
-                  Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш на этаж!
-                </p>
-              </div>
+              <h3 class="services-slide-title">Доставка</h3>
+              <p class="services-slide-description">
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш на этаж!
+              </p>
             </div>
             <div class="services-slide">
-              <div class="services-slide-text">
-                <p class="services-slide-title">
-                  Гарантия
-                </p>
-                <p class="services-slide-description">
-                  Если купленный у нас товар поломается или заискрит,<br>
-                  а также в случае пожара, спровоцированного его возгоранием,
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.<br>
-                  Дом уж восстановите как-нибудь сами.
-                </p>
-              </div>
+              <h3 class="services-slide-title">Гарантия</h3>
+              <p class="services-slide-description">
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
             </div>
             <div class="services-slide">
-              <div class="services-slide-text">
-                <p class="services-slide-title">
-                  Кредит
-                </p>
-                <p class="services-slide-description">
-                  Залезть в долговую яму стало проще!
-                  Кредитные консультанты придут вам на помощь.
-                </p>
-                <a class="btn btn-request" href="#">Отправить заявку</a>
-              </div>
+              <h3 class="services-slide-title">Кредит</h3>
+              <p class="services-slide-description">
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="btn btn-request" href="#">Отправить заявку</a>
             </div>
           </div>
         </div>
@@ -340,15 +271,9 @@
             <p class="company-features-item">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:</p>
             <ul class="delivery-company-list">
-              <li>
-                Деловые линии
-              </li>
-              <li>
-                Автотрейдинг
-              </li>
-              <li>
-                ЖелДорЭкспедиция
-              </li>
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
             </ul>
             <a class="btn btn-company" href="#">Подробнее о компании</a>
           </div>
@@ -372,47 +297,25 @@
             <div class="logo">
               Техномарт
             </div>
-            <nav class="footer-navigation">
-              <ul>
-                <li>
-                  <a href="#">Компания</a>
-                </li>
-                <li>
-                  <a href="#">Новости</a>
-                </li>
-                <li>
-                  <a href="#">Каталог</a>
-                </li>
-                <li>
-                  <a href="#">Доставка</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
+            <ul class="footer-navigation">
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
           </div>
           <div class="bottom-container">
             <p class="footer-contacts">
                 Б. Конюшенная, д. 19/8
                 +7 (812) 555-05-55
             </p>
-            <nav class="footer-navigation-additional">
-              <ul>
-                <li>
-                  <a href="#">Материалы</a>
-                </li>
-                <li>
-                  <a href="#">Техника</a>
-                </li>
-                <li>
-                  <a href="#">Инструмент</a>
-                </li>
-                <li>
-                  <a href="#">Спецпредложения</a>
-                </li>
-              </ul>
-            </nav>
+            <ul class="footer-navigation-additional">
+              <li><a href="#">Материалы</a></li>
+              <li><a href="#">Техника</a></li>
+              <li><a href="#">Инструмент</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -431,26 +334,28 @@
           </div>
           <div class="footer-info">
             <span class="footer-info-title">Обратная связь:</span>
-            <span class="footer-info-text">mail@htmlacademy.ru</span>
+            <a class="footer-info-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="footer-info">
             <span class="footer-info-title">Разработано -</span>
-            <span class="footer-info-text">htmlacademy.ru</span>
+            <a class="footer-info-text" href="htmlacademy.ru">htmlacademy.ru</a>
           </div>
         </div>
       </div>
   </footer>
-  <form class="form-write-us" action="https://echo.htmlacademy.ru" method="post">
-    <button class="btn btn-close" type="submit"></button>
-    <label for="date">Ваше имя:</label>
-    <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
-    <label for="email">Ваш e-mail</label>
-    <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
-    <label for="text">Текст письма</label>
-    <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
-    <div class="bottom-part">
-      <button class="btn btn-write-us" type="submit">Отправить</button>
-    </div>
-  </form>
+  <div class="form-write-us">
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <button class="btn btn-close" type="submit"></button>
+      <label for="date">Ваше имя:</label>
+      <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
+      <label for="email">Ваш e-mail</label>
+      <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
+      <label for="text">Текст письма</label>
+      <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+      <div class="bottom-part">
+        <button class="btn btn-write-us" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
