@@ -56,55 +56,55 @@
     </header>
     <main class="wrapper">
       <section class="promo">
-        <section class="promo-item materials">
-          <h2 class="promo-title">Материалы</h2>
-          <a class="btn btn-promo" href="#">на любой вкус</a>
-        </section>
-        <section class="promo-item tool">
-          <h2 class="promo-title">Инструмент</h2>
-          <a class="btn btn-promo" href="#">на все случаи</a>
-        </section>
-        <section class="promo-item technology">
-          <h2 class="promo-title">Техника</h2>
-          <a class="btn btn-promo" href="#">для стройки</a>
-        </section>
-        <section class="promo-item promo-slider">
-          <label for="btn-promo-1"></label>
-          <label for="btn-promo-2"></label>
-          <button class="promo-slider-next"></button>
-          <input type="radio" id="btn-promo-1" name="toggle" checked>
-          <input type="radio" id="btn-promo-2" name="toggle">
-          <div class="promo-slider-controls">
+        <div class="promo-row-top">
+          <div class="promo-item materials">
+            <h2 class="promo-title">Материалы</h2>
+            <a class="btn btn-promo" href="#">на любой вкус</a>
+          </div>
+          <div class="promo-item tool">
+            <h2 class="promo-title">Инструмент</h2>
+            <a class="btn btn-promo" href="#">на все случаи</a>
+          </div>
+          <div class="promo-item technology">
+            <h2 class="promo-title">Техника</h2>
+            <a class="btn btn-promo" href="#">для стройки</a>
+          </div>
+        </div>
+        <div class="promo-row-bottom">
+          <div class="promo-item promo-slider">
             <label for="btn-promo-1"></label>
             <label for="btn-promo-2"></label>
-          </div>
-          <div class="promo-slides">
-            <div class="promo-slide">
-              <div class="slide-text">
+            <input type="radio" id="btn-promo-1" name="toggle" checked>
+            <input type="radio" id="btn-promo-2" name="toggle">
+            <div class="promo-slider-controls">
+              <label for="btn-promo-1"></label>
+              <label for="btn-promo-2"></label>
+            </div>
+            <div class="promo-slides">
+              <div class="promo-slide">
                 <h3 class="promo-slide-title">Перфораторы</h3>
                 <p class="promo-slide-info">Настоящие мужские игрушки</p>
+                <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
               </div>
-              <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
-            </div>
-            <div class="promo-slide">
-              <div class="slide-text">
+              <div class="promo-slide">
                 <h3 class="promo-slide-title">Дрели</h3>
                 <p class="promo-slide-info">Соседям на радость</p>
+                <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
               </div>
-              <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
-        </section>
-        <section class="promo-item discount">
-          <h2 class="promo-title">Скидки 50%</h2>
-          <a class="btn btn-promo" href="#">на 350 товаров</a>
-        </section>
-        <section class="promo-item delivery">
-          <h2 class="promo-title">Доставка</h2>
-          <a class="btn btn-promo" href="#">бесплатно</a>
-        </section>
+          <div class="promo-container-column">
+            <div class="promo-item discount">
+              <h2 class="promo-title">Скидки 50%</h2>
+              <a class="btn btn-promo" href="#">на 350 товаров</a>
+            </div>
+            <div class="promo-item delivery">
+              <h2 class="promo-title">Доставка</h2>
+              <a class="btn btn-promo" href="#">бесплатно</a>
+            </div>
+          </div>
+        </div>
       </section>
-
       <section class="popular products-popular">
         <div class="popular-title">
           <h2>Популярные товары:</h2>
@@ -342,20 +342,20 @@
           </div>
         </div>
       </div>
-  </footer>
-  <div class="form-write-us">
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <button class="btn btn-close" type="submit"></button>
-      <label for="date">Ваше имя:</label>
-      <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
-      <label for="email">Ваш e-mail</label>
-      <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
-      <label for="text">Текст письма</label>
-      <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
-      <div class="bottom-part">
-        <button class="btn btn-write-us" type="submit">Отправить</button>
-      </div>
-    </form>
-  </div>
-</body>
+    </footer>
+    <div class="form-write-us">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <button class="btn btn-close" type="submit"></button>
+        <label for="date">Ваше имя:</label>
+        <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
+        <label for="email">Ваш e-mail</label>
+        <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
+        <label for="text">Текст письма</label>
+        <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+        <div class="bottom-part">
+          <button class="btn btn-write-us" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
