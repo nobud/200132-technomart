@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <div class = "header-top-bar">
         <div class="wrapper">
-          <h1><a class="logo" href="index.html">Техномарт</a></h1>
+          <a class="logo" href="index.html">Техномарт</a>
           <input class ="search" type="text" placeholder="Поиск:">
           <ul class="additional-menu">
             <li><a href="bookmarks.html">Закладки: 0</a></li>
@@ -78,8 +80,8 @@
         <div class="filter-block">
           <form action="https://echo.htmlacademy.ru" method="get">
             <div class="form-title">Фильтр</div>
-            <div class="price-block">
-              <h2>Цена</h2>
+            <fieldset class="price-block">
+              <legend>Цена</legend>
               <div class="interactive-price-range">
                 <div class="scale">
                   <div class="bar"></div>
@@ -92,7 +94,7 @@
                 <span>-</span>
                 <input type="text" name="max-price" value="30000">
               </div>
-            </div>
+            </fieldset>
 
             <fieldset class="brands-block">
               <legend>Производители</legend>
