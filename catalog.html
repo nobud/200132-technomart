@@ -16,7 +16,7 @@
           </div>
           <div class="form-search">
             <form action="/search" method="post">
-              <input class ="search" id="search" type="search" placeholder="Поиск:">
+              <input class ="search" id="search" name ="search" type="search" placeholder="Поиск:">
               <label class="icon-search icon-item" for="search"></label>
             </form>
           </div>
@@ -90,23 +90,23 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <div class="form-title">Фильтр:</div>
               <fieldset class="price-block">
-                <legend>Цена</legend>
-                <div class="interactive-price-range">
+                <legend>Цена:</legend>
+                <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="interactive-value interactive-min-value"></div>
-                  <div class="interactive-value interactive-max-value"></div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
                 </div>
-                <div class="price-range">
-                  <input type="text" name="min-price" value="0">
-                  <span>-</span>
-                  <input type="text" name="max-price" value="30000">
+                <div class="price-controls">
+                  <input class="min-price" type="text" name="min-price" value="0">
+                  <span>&mdash;</span>
+                  <input class="max-price" type="text" name="max-price" value="30000">
                 </div>
               </fieldset>
 
               <fieldset class="brands-block">
-                <legend>Производители</legend>
+                <legend>Производители:</legend>
                 <input id="bosh" type="checkbox" name="bosh" checked>
                 <label for="bosh">Bosh</label>
                 <input id = "interscol" type="checkbox" name="interscol">
@@ -120,7 +120,7 @@
               </fieldset>
 
               <fieldset class="product-type-block">
-                <legend>Питание</legend>
+                <legend>Питание:</legend>
                 <input id="battery" type="radio" name="product-group" value="battery" checked>
                 <label for="battery">Аккумуляторные</label>
                 <input id="net" type="radio" name="product-group" value="net">
