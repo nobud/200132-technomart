@@ -789,7 +789,6 @@ h2 {
   float: left;
   width: 380px;
   margin: 0;
-  margin-right: 20px;
   padding: 0;
   list-style: none;
   font-size: 0;
@@ -1322,17 +1321,23 @@ h2 {
 .filter-block fieldset {
   position: relative;
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   padding: 0;
-  padding-top: 34px;
+  padding-top: 32px;
   border: none;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-block .product-type-block,
+.filter-block .brands-block {
+  padding-top: 30px;
+  padding-bottom: 2px;
 }
 
 .filter-block legend {
   position: absolute;
   display: block;
-  top: -10px;
+  top: -13px;
   left: 0;
   font-size: 17px;
   line-height: 30px;
@@ -1343,7 +1348,7 @@ h2 {
 .range-controls {
   position: relative;
   height: 80px;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
   padding: 0 20px;
   background-color: #f7f3ec;
   border-bottom-left-radius: 5px;
@@ -1410,8 +1415,84 @@ h2 {
   text-align: center;
 }
 
-.filter-block .product-type-block {
-  margin-bottom: 58px;
+.filter-block fieldset:last-of-type {
+  margin-bottom: 56px;
+}
+
+.brands-block input[type="checkbox"],
+.product-type-block input[type="radio"] {
+  display: none;
+}
+
+.filter-item + label {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  padding-left: 33px;
+  line-height: 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-item:first-of-type + label {
+  margin-top: 0;
+}
+
+.filter-item + label::before,
+.filter-item + label::after {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: "symbols-technomart";
+  font-size: 28px;
+  line-height: 20px;
+  color: #c1c1c1;
+}
+
+.filter-item + label:hover::before,
+.filter-item + label:hover::after {
+  color: #b5b5b5;
+}
+
+.filter-item:disabled + label,
+.filter-item:disabled + label {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.filter-item[type="checkbox"] + label::before {
+  content: "\2610";
+}
+
+.filter-item[type="checkbox"]:checked + label::after {
+  content: "\2611";
+}
+
+.filter-item[type="radio"] + label::before {
+  content: "\25cb";
+}
+
+.filter-item[type="radio"]:checked + label::after {
+  content: "\25cf";
+}
+
+.filter-block .btn-filter {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 140px;
+  padding: 9px 20px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
 }
 
 .catalog-info {
