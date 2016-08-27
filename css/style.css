@@ -16,51 +16,51 @@ body {
 }
 
 .sprite {
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    display: block;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: block;
 }
 
 .sprite-delivery {
-    width: 78px;
-    height: 63px;
-    background-position: -10px -10px;
+  width: 78px;
+  height: 63px;
+  background-position: -10px -10px;
 }
 
 .sprite-discount {
-    width: 59px;
-    height: 72px;
-    background-position: -10px -93px;
+  width: 59px;
+  height: 72px;
+  background-position: -10px -93px;
 }
 
 .sprite-flag-new {
-    width: 60px;
-    height: 59px;
-    background-position: -10px -185px;
+  width: 60px;
+  height: 59px;
+  background-position: -10px -185px;
 }
 
 .sprite-materials {
-    width: 44px;
-    height: 65px;
-    background-position: -10px -264px;
+  width: 44px;
+  height: 65px;
+  background-position: -10px -264px;
 }
 
 .sprite-services-shadow {
-    width: 10px;
-    height: 272px;
-    background-position: -10px -349px;
+  width: 10px;
+  height: 272px;
+  background-position: -10px -349px;
 }
 
 .sprite-technology {
-    width: 78px;
-    height: 62px;
-    background-position: -10px -641px;
+  width: 78px;
+  height: 62px;
+  background-position: -10px -641px;
 }
 
 .sprite-tool {
-    width: 75px;
-    height: 61px;
-    background-position: -10px -723px;
+  width: 75px;
+  height: 61px;
+  background-position: -10px -723px;
 }
 
 @font-face {
@@ -459,7 +459,7 @@ h2 {
 .btn {
   display: inline-block;
   vertical-align: middle;
-
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -471,6 +471,7 @@ h2 {
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .btn-user {
@@ -645,17 +646,22 @@ h2 {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.promo-row-top {
+.promo {
+  margin-bottom: 53px;
+}
+
+.promo .promo-row-top {
   margin-bottom: 20px;
 }
 
-.promo-column {
+.promo .promo-column {
+  box-sizing: border-box;
   float: left;
   width: 300px;
   margin-right: 20px;
 }
 
-.promo-slider {
+.promo .promo-slider {
   position: relative;
   width: 620px;
 
@@ -675,22 +681,22 @@ h2 {
   border-right: 3px solid #ffffff;
 }
 
-.promo-slider .left::before {
+.promo .promo-slider .left::before {
   left: 30px;
   transform: rotate(225deg);
 }
 
-.promo-slider .right::before {
+.promo .promo-slider .right::before {
   right: 26px;
   transform: rotate(45deg);
 }
 
-.promo-slide {
+.promo .promo-slide {
   background-color: #695a48;
   color: #ffffff;
 }
 
-.promo-slide-title {
+.promo .promo-slide-title {
   margin: 0;
 
   font-family: "Cuprum", "Arial", sans-serif;
@@ -700,15 +706,88 @@ h2 {
   text-transform: uppercase;
 }
 
-.promo-column:last-child {
+.promo .promo-column:last-child {
   margin-right: 0;
 }
 
-.promo-item {
-  min-height: 123px;
+.promo .promo-item {
+  position: relative;
+  padding-right: 110px;
 }
 
-.promo-title {
+
+
+.promo .promo-item::after {
+  position: absolute;
+  content: "";
+  top: 25%;
+  right: 0;
+  background: url("../img/sprite.png") no-repeat 0 0;
+  z-index: 20;
+}
+
+.promo .materials {
+  background-color: #f6b22d;
+}
+
+.promo .materials::after {
+  right: 42px;
+  width: 44px;
+  height: 65px;
+  background-position: -10px -264px;
+}
+
+.promo .tool {
+  background-color: #4aafde;
+}
+
+.promo .tool::after {
+  right: 28px;
+  width: 75px;
+  height: 61px;
+  background-position: -10px -723px;
+}
+
+.promo .technology {
+  background-color: #cc79d1;
+}
+
+.promo .technology::after {
+  right: 31px;
+  width: 78px;
+  height: 62px;
+  background-position: -10px -641px;
+}
+
+.promo .discount {
+  margin-bottom: 20px;
+  background-color: #85d179;
+}
+
+.promo .discount::after {
+  right: 45px;
+  margin-top: -4px;
+  width: 59px;
+  height: 72px;
+  background-position: -10px -93px;
+}
+
+.promo .delivery {
+  background-color: #f6b22d;
+}
+
+.promo .delivery::after {
+  right: 31px;
+  width: 78px;
+  height: 63px;
+  background-position: -10px -10px;
+}
+
+.promo .promo-title {
+  margin: 0;
+  margin-bottom: 12px;
+  padding-top: 20px;
+  padding-left: 22px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -716,34 +795,35 @@ h2 {
   text-transform: none;
 }
 
-.materials {
-  background-color: #f6b22d;
+.promo .btn-promo {
+  margin-left: 24px;
+  margin-bottom: 22px;
+  min-width: 115px;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
 }
 
-.tool {
-  background-color: #4aafde;
+.promo .btn-promo:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.technology {
-  background-color: #cc79d1;
+.promo .btn-promo:active {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.discount {
-  margin-bottom: 20px;
-
-  background-color: #85d179;
+.btn-catalog {
+  margin-left: 24px;
+  margin-bottom: 22px;
+  min-width: 175px;
 }
 
-.delivery {
-  background-color: #f6b22d;
+.btn-catalog:hover {
+  background-color: #ca2c37;
 }
 
-.promo-title {
-  margin: 0;
-}
-
-.promo {
-  margin-bottom: 53px;
+.btn-catalog:active {
+  background-color: #ba2732;
 }
 
 .popular-title {
@@ -891,10 +971,11 @@ h2 {
   margin-right: 0;
 }
 
-.product .flag {
+.product .flag,
+.promo-item .flag {
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
   width: 60px;
   height: 60px;
   text-indent: -1000px;
@@ -902,7 +983,13 @@ h2 {
   z-index: 20;
 }
 
-.product .flag-new {
+.product .flag {
+  top: -1px;
+  right: -1px;
+}
+
+.product .flag-new,
+.promo-item .flag-new {
   background: url("../img/sprite.png") no-repeat 0 0;
   width: 60px;
   height: 59px;
