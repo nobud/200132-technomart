@@ -84,21 +84,21 @@
           </div>
           <div class="promo-row-bottom clearfix">
             <div class="promo-column promo-slider">
+              <input type="radio" id="btn-promo-1" name="promo-toggle" checked>
+              <input type="radio" id="btn-promo-2" name="promo-toggle">
               <label class="btn-listing left" for="btn-promo-1"></label>
               <label class="btn-listing right" for="btn-promo-2"></label>
-              <input type="radio" id="btn-promo-1" name="toggle" checked>
-              <input type="radio" id="btn-promo-2" name="toggle">
               <div class="promo-slider-controls">
                 <label for="btn-promo-1"></label>
                 <label for="btn-promo-2"></label>
               </div>
               <div class="promo-slides">
-                <div class="promo-slide">
+                <div class="promo-slide" id="promo-slide-1">
                   <h3 class="promo-slide-title">Перфораторы</h3>
                   <p class="promo-slide-info">Настоящие мужские игрушки</p>
                   <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
                 </div>
-                <div class="promo-slide">
+                <div class="promo-slide" id="promo-slide-2">
                   <h3 class="promo-slide-title">Дрели</h3>
                   <p class="promo-slide-info">Соседям на радость</p>
                   <a class="btn btn-catalog" href="catalog.html">Открыть каталог</a>
@@ -240,16 +240,16 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="services-slider clearfix">
-            <input type="radio" id="btn-delivery" name="toggle" checked>
-            <input type="radio" id="btn-guarantee" name="toggle">
-            <input type="radio" id="btn-credit" name="toggle">
+            <input type="radio" id="btn-delivery" name="services-toggle" checked>
+            <input type="radio" id="btn-guarantee" name="services-toggle">
+            <input type="radio" id="btn-credit" name="services-toggle">
             <div class="services-slider-controls">
               <label for="btn-delivery">Доставка</label>
               <label for="btn-guarantee">Гарантия</label>
               <label for="btn-credit">Кредит</label>
             </div>
             <div class="services-slides">
-              <div class="services-slide">
+              <div class="services-slide" id="services-slide-1">
                 <h3 class="services-slide-title">Доставка</h3>
                 <p class="services-slide-description">
                   Мы с удовольствием доставим ваш товар прямо
@@ -258,7 +258,7 @@
                   поднимая его на ваш на этаж!
                 </p>
               </div>
-              <div class="services-slide">
+              <div class="services-slide" id="services-slide-2">
                 <h3 class="services-slide-title">Гарантия</h3>
                 <p class="services-slide-description">
                   Если купленный у нас товар поломается или заискрит,<br>
@@ -268,7 +268,7 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </div>
-              <div class="services-slide">
+              <div class="services-slide" id="services-slide-3">
                 <h3 class="services-slide-title">Кредит</h3>
                 <p class="services-slide-description">
                   Залезть в долговую яму стало проще!

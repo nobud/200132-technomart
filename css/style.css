@@ -664,14 +664,41 @@ h2 {
 .promo .promo-slider {
   position: relative;
   width: 620px;
+  height: 265px;
+  background-color: #554939;
+  color: #ffffff;
+}
 
-  outline: 1px solid orange;
-  min-height: 266px;
+.promo-slider-controls {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-left: 5px;
+  z-index: 20;
+  font-size: 0;
+}
+
+.promo-slider > input[type="radio"] {
+  display: none;
+}
+
+.promo-slider-controls label {
+  display: inline-block;
+  vertical-align: top;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .promo-slider .btn-listing::before {
   position: absolute;
   top: 50%;
+  margin-top: -10px;
   content: "";
   display: block;
   box-sizing: border-box;
@@ -681,29 +708,71 @@ h2 {
   border-right: 3px solid #ffffff;
 }
 
-.promo .promo-slider .left::before {
+.promo-slider .left::before {
   left: 30px;
   transform: rotate(225deg);
+  cursor: pointer;
 }
 
-.promo .promo-slider .right::before {
+.promo-slider .right::before {
   right: 26px;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .promo .promo-slide {
-  background-color: #695a48;
+  display: none;
+  width: 620px;
+  height: 265px;
+}
+
+.promo .promo-slide::after {
+  content: "";
+  background: url("../img/promo-slider-drill.jpg") no-repeat 0 0;
+}
+
+#btn-promo-1:checked ~ .promo-slides #promo-slide-1,
+#btn-promo-2:checked ~ .promo-slides #promo-slide-2 {
+  display: block;
+}
+
+#btn-promo-1:checked ~ .promo-slides #promo-slide-1 {
+  background-color: #554939;
+  background: url("../img/promo-slider-perforator.jpg") no-repeat 0 0;
   color: #ffffff;
 }
 
-.promo .promo-slide-title {
+#btn-promo-2:checked ~ .promo-slides #promo-slide-2 {
+  background-color: #1f1412;
+  background: url("../img/promo-slider-drill.jpg") no-repeat 0 0;
+  color: #ffffff;
+}
+
+#btn-promo-1:checked ~ .promo-slider-controls label[for="btn-promo-1"],
+#btn-promo-2:checked ~ .promo-slider-controls label[for="btn-promo-2"] {
+  background-color: #ee3643;
+}
+
+.promo-slide-title {
   margin: 0;
+  margin-bottom: 6px;
+  padding-top: 25px;
+  padding-left: 24px;
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.promo-slide-info {
+  margin: 0;
+  margin-bottom: 100px;
+  padding-left: 24px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .promo .promo-column:last-child {
@@ -714,8 +783,6 @@ h2 {
   position: relative;
   padding-right: 110px;
 }
-
-
 
 .promo .promo-item::after {
   position: absolute;
