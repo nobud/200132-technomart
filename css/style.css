@@ -1333,6 +1333,92 @@ h2 {
   line-height: 24px;
 }
 
+.services-slider {
+  position: relative;
+  width: 940px;
+  height: 334px;
+  background-color: transparent;
+}
+
+.services-slider-controls {
+  float: left;
+  width: 240px;
+}
+
+.services-slider label {
+  display: block;
+  vertical-align: top;
+  min-width: 6px;
+  padding: 12px 10px;
+
+  background-color: #32425c;
+  color: #ffffff;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 120%;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  cursor: pointer;
+}
+
+.services-slider > input[type="radio"] {
+  display: none;
+}
+
+.services-slides {
+  float: right;
+  width: 640px;
+}
+
+.services-slide {
+  display: none;
+  width: 640px;
+  height: 400px;
+  background-color: transparent;
+}
+
+.services-slide::before {
+  content: "";
+  background: url("../img/services-guarantee.png") no-repeat 0 0;
+}
+
+.services-slide::after {
+  content: "";
+  background: url("../img/services-credit.png") no-repeat 0 0;
+}
+
+#services-btn-1:checked ~ .services-slides #services-slide-1,
+#services-btn-2:checked ~ .services-slides #services-slide-2,
+#services-btn-3:checked ~ .services-slides #services-slide-3 {
+  display: block;
+}
+
+#services-btn-1:checked ~ .services-slides #services-slide-1 {
+  background-color: transparent;
+  background: url("../img/services-delivery.png") no-repeat 0 0;
+  color: #ffffff;
+}
+
+#services-btn-2:checked ~ .services-slides #services-slide-2 {
+  background-color: transparent;
+  background: url("../img/services-guarantee.png") no-repeat 0 0;
+  color: #000000;
+}
+
+#services-btn-3:checked ~ .services-slides #services-slide-3 {
+  background-color: transparent;
+  background: url("../img/services-credit.png") no-repeat 0 0;
+  color: #000000;
+}
+
+#services-btn-1:checked ~ .services-slider-controls label[for="services-btn-1"],
+#services-btn-2:checked ~ .services-slider-controls label[for="services-btn-2"],
+#services-btn-3:checked ~ .services-slider-controls label[for="services-btn-3"] {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #32425c;
+}
+
 .services-slide-title {
   margin: 0;
 
@@ -1344,18 +1430,8 @@ h2 {
   text-transform: uppercase;
 }
 
-.services-slider-controls {
-  float: left;
-  width: 240px;
-}
-
-.services-slider-controls label {
-  display: block;
-}
-
-.services-slides {
-  float:right;
-  width: 640px;
+.services-slide-description {
+  color: #000000;
 }
 
 .company-features {
