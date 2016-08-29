@@ -706,6 +706,7 @@ h2 {
   height: 27px;
   border-top: 3px solid #ffffff;
   border-right: 3px solid #ffffff;
+  z-index: 20;
 }
 
 .promo-slider .left::before {
@@ -721,30 +722,34 @@ h2 {
 }
 
 .promo .promo-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
   display: none;
   width: 620px;
   height: 265px;
+  z-index: 10;
 }
 
-.promo .promo-slide::after {
-  content: "";
-  background: url("../img/promo-slider-drill.jpg") no-repeat 0 0;
-}
-
-#btn-promo-1:checked ~ .promo-slides #promo-slide-1,
-#btn-promo-2:checked ~ .promo-slides #promo-slide-2 {
+#btn-promo-1:checked ~ .promo-slides .promo-slide:nth-child(1),
+#btn-promo-2:checked ~ .promo-slides .promo-slide:nth-child(2) {
   display: block;
 }
 
-#btn-promo-1:checked ~ .promo-slides #promo-slide-1 {
+.promo-slides .promo-slide:nth-child(1) {
   background-color: #554939;
-  background: url("../img/promo-slider-perforator.jpg") no-repeat 0 0;
+  background-image: url("../img/promo-slider-perforator.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   color: #ffffff;
 }
 
-#btn-promo-2:checked ~ .promo-slides #promo-slide-2 {
+.promo-slides .promo-slide:nth-child(2) {
   background-color: #1f1412;
-  background: url("../img/promo-slider-drill.jpg") no-repeat 0 0;
+  background-image: url("../img/promo-slider-drill.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   color: #ffffff;
 }
 
@@ -1275,7 +1280,7 @@ h2 {
 }
 
 .producers-popular {
-  margin-bottom: 65px;
+  margin-bottom: 67px;
 }
 
 .producers-list {
@@ -1320,36 +1325,49 @@ h2 {
   margin-right: 0;
 }
 
-.services {
-  background-color: #f2f6f8;
-
-  margin-bottom: 70px;
+.wrapper-services {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
-.services-title {
-  margin: 0;
-
-  font-size: 30px;
-  line-height: 24px;
+.services {
+  background-color: #f2f6f8;
+  margin-bottom: 75px;
 }
 
 .services-slider {
   position: relative;
   width: 940px;
-  height: 334px;
+  height: 284px;
   background-color: transparent;
 }
 
 .services-slider-controls {
+  position: relative;
   float: left;
   width: 240px;
+}
+
+.services-slider-controls:after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 272px;
+  background-position: -10px -349px;
+  top: 0;
+  right: 0;
+  margin-top: -42px;
 }
 
 .services-slider label {
   display: block;
   vertical-align: top;
   min-width: 6px;
-  padding: 12px 10px;
+  padding: 16px 22px;
+  padding-bottom: 18px;
 
   background-color: #32425c;
   color: #ffffff;
@@ -1361,67 +1379,58 @@ h2 {
   cursor: pointer;
 }
 
-.services-slider > input[type="radio"] {
+.services-slider label:hover {
+  background-color: #293449;
+  color: #ffffff;
+}
+
+.services input[type="radio"] {
   display: none;
 }
 
 .services-slides {
+  position: relative;
   float: right;
-  width: 640px;
+  width: 620px;
+  background-color: transparent;
 }
 
 .services-slide {
+  position: absolute;
   display: none;
   width: 640px;
-  height: 400px;
+  height: 284px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
   background-color: transparent;
 }
 
-.services-slide::before {
-  content: "";
-  background: url("../img/services-guarantee.png") no-repeat 0 0;
-}
-
-.services-slide::after {
-  content: "";
-  background: url("../img/services-credit.png") no-repeat 0 0;
-}
-
-#services-btn-1:checked ~ .services-slides #services-slide-1,
-#services-btn-2:checked ~ .services-slides #services-slide-2,
-#services-btn-3:checked ~ .services-slides #services-slide-3 {
+#services-btn-1:checked ~ .wrapper-services .services-slide:nth-child(1),
+#services-btn-2:checked ~ .wrapper-services .services-slide:nth-child(2),
+#services-btn-3:checked ~ .wrapper-services .services-slide:nth-child(3) {
   display: block;
 }
 
-#services-btn-1:checked ~ .services-slides #services-slide-1 {
-  background-color: transparent;
-  background: url("../img/services-delivery.png") no-repeat 0 0;
-  color: #ffffff;
+.services-title {
+  margin: 0;
+  margin-bottom: 22px;
+  padding-top: 65px;
+  font-size: 30px;
+  line-height: 24px;
 }
 
-#services-btn-2:checked ~ .services-slides #services-slide-2 {
-  background-color: transparent;
-  background: url("../img/services-guarantee.png") no-repeat 0 0;
-  color: #000000;
-}
-
-#services-btn-3:checked ~ .services-slides #services-slide-3 {
-  background-color: transparent;
-  background: url("../img/services-credit.png") no-repeat 0 0;
-  color: #000000;
-}
-
-#services-btn-1:checked ~ .services-slider-controls label[for="services-btn-1"],
-#services-btn-2:checked ~ .services-slider-controls label[for="services-btn-2"],
-#services-btn-3:checked ~ .services-slider-controls label[for="services-btn-3"] {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #32425c;
+.services-info {
+  width: 400px;
+  min-height: 75px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 10px 0;
 }
 
 .services-slide-title {
   margin: 0;
-
+  margin-bottom: 23px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1431,6 +1440,88 @@ h2 {
 }
 
 .services-slide-description {
+  margin: 0;
+  margin-bottom: 28px;
+  color: #000000;
+}
+
+/*.services-slides .services-slide:nth-child(1) {
+  background-color: transparent;
+  background-image: url("../img/services-delivery.png");
+  background-repeat: no-repeat;
+  background-position: 152px 24px;
+  color: #ffffff;
+}*/
+
+.services-slide:nth-child(1) .services-slide-title,
+.services-slide:nth-child(1) .services-slide-description {
+  padding-right: 80px;
+  max-width: 300px;
+}
+
+/*.services-slides .services-slide:nth-child(2) {
+  background-color: transparent;
+  background-image: url("../img/services-guarantee.png");
+  background-repeat: no-repeat;
+  background-position: 238px 0;
+  color: #000000;
+}*/
+
+.services-slide:nth-child(2) .services-slide-title,
+.services-slide:nth-child(2) .services-slide-description {
+  padding-right: 80px;
+  max-width: 380px;
+}
+
+/*.services-slides .services-slide:nth-child(3) {
+  background-color: transparent;
+  background-image: url("../img/services-credit.png");
+  background-repeat: no-repeat;
+  background-position: 182px 0;
+  color: #000000;
+}*/
+
+.services-slide:nth-child(3) .services-slide-title,
+.services-slide:nth-child(3) .services-slide-description {
+  padding-right: 80px;
+  max-width: 300px;
+}
+
+.services-slide:nth-child(3) .btn-request {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+#services-btn-1:checked ~ .wrapper-services label[for="services-btn-1"],
+#services-btn-2:checked ~ .wrapper-services label[for="services-btn-2"],
+#services-btn-3:checked ~ .wrapper-services label[for="services-btn-3"] {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #32425c;
+}
+
+#services-btn-1:checked ~ .wrapper-services {
+  background-color: transparent;
+
+  background-image: url("../img/services-delivery.png");
+  background-repeat: no-repeat;
+  background-position: 502px 262px;
+  color: #000000;
+}
+
+#services-btn-2:checked ~ .wrapper-services {
+  background-color: transparent;
+  background-image: url("../img/services-guarantee.png");
+  background-repeat: no-repeat;
+  background-position: 588px 238px;
+  color: #000000;
+}
+
+#services-btn-3:checked ~ .wrapper-services {
+  background-color: transparent;
+  background-image: url("../img/services-credit.png");
+  background-repeat: no-repeat;
+  background-position: 532px 238px;
   color: #000000;
 }
 
@@ -1439,14 +1530,13 @@ h2 {
   width: 540px;
 }
 
-.contacts {
-  float: right;
-  width: 320px;
+.company-features-title {
+  margin: 0;
 }
 
-.company-features-title,
 .contacts-title {
-  margin: 0;
+  margin: 0px;
+  margin-top: 6px;
 }
 
 .company-features-title {
@@ -1454,9 +1544,33 @@ h2 {
   line-height: 120%;
 }
 
+.company-features-item {
+  margin: 0;
+}
+
+.delivery-company-list {
+  margin: 0;
+  padding: none;
+  list-style: none;
+}
+
+.contacts {
+  float: right;
+  width: 320px;
+}
+
 .contacts-title {
+  margin: 0;
   font-size: 30px;
   line-height: 24px;
+}
+
+.contacts-info {
+ margin: 0;
+}
+
+.map {
+  background-color: #f1efe8;
 }
 
 .page-title {
