@@ -39,7 +39,6 @@ body {
   text-decoration: inherit;
   font-style: normal;
   font-variant: normal;
-
   speak: none;
 }
 
@@ -226,8 +225,7 @@ h2 {
   line-height: 18px;
 }
 
-.additional-menu a
- {
+.additional-menu a {
   display: block;
   padding: 12px 21px;
 
@@ -250,12 +248,11 @@ h2 {
 }
 
 .bookmarks a {
+  position: relative;
   box-sizing: border-box;
   padding-left: 43px;
   padding-right: 10px;
-  min-width: 150px;
-
-  position: relative;
+  width: 150px;
 }
 
 .bookmarks a::before {
@@ -264,12 +261,12 @@ h2 {
 }
 
 .cart a {
+  position: relative;
   box-sizing: border-box;
   padding-left: 48px;
   padding-right: 10px;
-  min-width: 150px;
+  width: 150px;
 
-  position: relative;
 }
 
 .cart a::before {
@@ -528,12 +525,10 @@ h2 {
   right: 1px;
   margin-top: -2px;
   content: "";
-
   display: block;
   width: 4px;
   height: 5px;
   border-radius: 2px;
-
   background-color: #32425c;
 }
 
@@ -564,8 +559,7 @@ h2 {
   line-height: 17px;
 }
 
-.main-navigation a
- {
+.main-navigation a {
   display: block;
   padding: 18px 30px;
   padding-top: 20px;
@@ -658,14 +652,10 @@ h2 {
 }
 
 .promo .promo-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   overflow: hidden;
   display: none;
   width: 620px;
   height: 265px;
-  z-index: 10;
 }
 
 #btn-promo-1:checked ~ .promo-slides .promo-slide:nth-child(1),
@@ -823,7 +813,9 @@ h2 {
 .btn-catalog {
   margin-left: 24px;
   margin-bottom: 22px;
-  min-width: 175px;
+  width: 175px;
+  max-height: 30px;
+  overflow: hidden;
 }
 
 .btn-catalog:hover {
@@ -846,7 +838,6 @@ h2 {
   padding-top: 30px;
   padding-left: 27px;
   max-width: 556px;
-
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
@@ -926,7 +917,6 @@ h2 {
 .sort-order {
   float: right;
   width: 60px;
-
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1241,7 +1231,6 @@ h2 {
   font-size: 14px;
   margin-bottom: 20px;
   margin-right: 20px;
-
   border: 1px solid #e7e7e7;
 }
 
@@ -1325,7 +1314,6 @@ h2 {
   min-width: 6px;
   padding: 16px 22px;
   padding-bottom: 18px;
-
   background-color: #32425c;
   color: #ffffff;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1353,12 +1341,9 @@ h2 {
 }
 
 .services-slide {
-  position: absolute;
   display: none;
   width: 640px;
   height: 284px;
-  top: 0;
-  left: 0;
   overflow: hidden;
   background-color: transparent;
 }
@@ -1434,7 +1419,6 @@ h2 {
 
 #services-btn-1:checked ~ .wrapper-services {
   background-color: transparent;
-
   background-image: url("../img/services-delivery.png");
   background-repeat: no-repeat;
   background-position: 502px 260px;
@@ -1552,7 +1536,6 @@ h2 {
   margin: 0;
   margin-bottom: 20px;
   padding: 28px 28px;
-
   background-color: #f2f6f8;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
@@ -1590,6 +1573,8 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
   outline: none;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .breadcrumbs-index a {
@@ -1597,7 +1582,7 @@ h2 {
   padding-right: 10px;
 }
 
-.breadcrumbs li:nth-child(n+2)::before {
+.breadcrumbs li:not(:first-child)::before {
   font-family: "symbols-technomart";
   font-size: 14px;
   line-height: 20px;
@@ -1628,13 +1613,12 @@ h2 {
 }
 
 .form-title {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 9px;
   padding: 12px 16px;
-
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-
   background-color: #f7f3ec;
   color: #000000;
 }
@@ -1642,7 +1626,7 @@ h2 {
 .filter-block fieldset {
   position: relative;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   padding: 0;
   padding-top: 32px;
   border: none;
@@ -1655,11 +1639,22 @@ h2 {
   padding-bottom: 2px;
 }
 
-.filter-block legend {
+/*.filter-block legend {
   position: absolute;
   display: block;
   top: -13px;
   left: 0;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}*/
+
+.filter-block legend {
+  display: block;
+  /*margin-top: -13px;*/
+  margin-bottom: -17px;
+
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
