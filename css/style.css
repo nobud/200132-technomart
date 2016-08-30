@@ -616,7 +616,7 @@ h2 {
   cursor: pointer;
 }
 
-.promo-slider .btn-listing::before {
+.promo-slider .btn-listing {
   position: absolute;
   top: 50%;
   margin-top: -10px;
@@ -630,13 +630,13 @@ h2 {
   z-index: 20;
 }
 
-.promo-slider .left::before {
+.promo-slider .left {
   left: 30px;
   transform: rotate(225deg);
   cursor: pointer;
 }
 
-.promo-slider .right::before {
+.promo-slider .right {
   right: 26px;
   transform: rotate(45deg);
   cursor: pointer;
@@ -1055,7 +1055,7 @@ h2 {
   top: 0;
   left: 0;
   width: 218px;
-  height: 97px;
+  height: 95px;
   padding: 40px 0;
   padding-top: 43px;
   background-color: #ffffff;
