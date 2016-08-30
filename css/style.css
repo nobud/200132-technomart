@@ -152,7 +152,6 @@ h2 {
   box-sizing: border-box;
   float: left;
   width: 270px;
-
   position: relative;
   font-size: 0;
 }
@@ -166,11 +165,9 @@ h2 {
 .search {
   box-sizing: border-box;
   width: 100%;
-
   padding: 12px 10px;
   padding-left: 46px;
   background-color: transparent;
-
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -261,7 +258,6 @@ h2 {
   padding-left: 48px;
   padding-right: 10px;
   width: 150px;
-
 }
 
 .cart a::before {
@@ -850,7 +846,7 @@ h2 {
 }
 
 .product-list {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .sort {
@@ -1174,7 +1170,7 @@ h2 {
   height: 39px;
   line-height: 29px;
   min-width: 39px;
-  padding: 5px 5px;
+  padding: 4px 5px;
   text-align: center;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -1828,6 +1824,7 @@ h2 {
   margin-right: 0;
   padding: 17px 10px;
   text-align: center;
+  text-decoration: none;
   font-size: 30px;
   line-height: 30px;
 }
@@ -1844,20 +1841,20 @@ h2 {
 .footer-navigation li {
   display: inline-block;
   vertical-align: top;
+  padding: 38px 29px;
+  padding-bottom: 5px;
   font-size: 18px;
   line-height: 24px;
 }
 
 .footer-navigation a {
   display: block;
-  padding: 38px 29px;
-  padding-bottom: 5px;
   font: inherit;
   color: #f1f5f7;
   text-decoration: none;
 }
 
-.footer-navigation-item:last-child a {
+.footer-navigation li:last-child {
   padding-right: 0;
 }
 
@@ -1892,24 +1889,24 @@ h2 {
 .footer-navigation-additional li {
   display: inline-block;
   vertical-align: top;
+  padding: 0 29px;
+  padding-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
 
 .footer-navigation-additional a {
   display: block;
-  padding: 0 29px;
-  padding-bottom: 20px;
   font: inherit;
   color: #ffd180;
   text-decoration: none;
 }
 
-.footer-navigation-additional-item:last-child a {
+.footer-navigation-additional li:last-child {
   padding-right: 0;
 }
 
-.footer-navigation-additional-item:first-child a {
+.footer-navigation-additional li:first-child {
   padding-left: 15px;
 }
 
@@ -1943,6 +1940,7 @@ h2 {
 }
 
 .footer-social {
+  padding: 35px 0;
   padding-right: 32px;
   text-align: center;
   font-size: 0;
@@ -1984,17 +1982,28 @@ h2 {
 
 .social-btn {
   position: relative;
-  margin: 35px 5px;
-  margin-right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
   padding: 0;
   width: 41px;
   height: 41px;
   border-radius: 50%;
   background-color: #212a3a;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: none;
   color: #ffffff;
   text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
+
 
 .social-btn:hover,
 .social-btn:active {
