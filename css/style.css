@@ -603,6 +603,7 @@ h2 {
   list-style: none;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 0;
+  text-align: center;
 }
 
 .main-navigation li {
@@ -619,14 +620,6 @@ h2 {
   padding-top: 20px;
   color: inherit;
   text-decoration: none;
-}
-
-.main-navigation-item:first-child a {
-  padding-left: 52px;
-}
-
-.main-navigation-item:last-child a {
-  padding-right: 55px;
 }
 
 .main-navigation a:hover {
