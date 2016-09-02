@@ -273,6 +273,10 @@
       </section>
       <section class="company-info">
         <div class="wrapper clearfix">
+          <div class="full-interactive-map">
+            <button class="btn-close" type="button" title="Закрыть">Закрыть</button>
+            <div id="yandex-map"></div>
+          </div>
           <div class="company-features">
             <h2 class="company-features-title">Компания «Техномарт»</h2>
             <div class="company-features-description">
@@ -293,7 +297,9 @@
               заехав в наш офис:
             </p>
             <div class="map">
-              <img src="img/map.jpg" width="300" height="158" alt="положение магазина на карте">
+              <a href="http://maps.yandex.ru">
+                <img src="img/map.jpg" width="300" height="158" alt="положение магазина на карте">
+              </a>
             </div>
             <a class="btn btn-write-us" href="#">Заблудились? Напишите нам!</a>
           </div>
@@ -355,19 +361,21 @@
     </footer>
     <div class="form-write-us">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <button class="btn btn-close" type="submit"></button>
-        <div class="row clearfix">
-          <div class="column">
-            <label for="date">Ваше имя:</label>
-            <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
+        <div class="form-write-us-wrapper">
+          <button class="btn-close" type="button" tittle="Закрыть">Закрыть</button>
+          <div class="row clearfix">
+            <div class="column">
+              <label for="date">Ваше имя:</label>
+              <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="column">
+              <label for="email">Ваш e-mail:</label>
+              <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
+            </div>
           </div>
-          <div class="column">
-            <label for="email">Ваш e-mail:</label>
-            <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
-          </div>
+          <label for="text">Текст письма:</label>
+          <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
         </div>
-        <label for="text">Текст письма:</label>
-        <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
         <div class="bottom-part">
           <button class="btn btn-write-us" type="submit">Отправить</button>
         </div>
