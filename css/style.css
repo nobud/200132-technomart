@@ -592,7 +592,6 @@ h2 {
 .promo .promo-slider {
   position: relative;
   width: 620px;
-  height: 265px;
   background-color: #554939;
   color: #ffffff;
 }
@@ -653,7 +652,7 @@ h2 {
   overflow: hidden;
   display: none;
   width: 620px;
-  height: 265px;
+  min-height: 265px;
 }
 
 #btn-promo-1:checked ~ .promo-slides .promo-slide:nth-child(1),
@@ -1178,15 +1177,9 @@ h2 {
   font-size: 13px;
 }
 
-.pagination .prev-btn-page,
 .pagination .next-btn-page {
   min-width: 140px;
 }
-
-.pagination li:first-child {
-  display: none;
-}
-
 
 .pagination .current,
 .pagination .current:hover,
@@ -1209,7 +1202,7 @@ h2 {
 }
 
 .producers-popular {
-  margin-bottom: 67px;
+  margin-bottom: 65px;
 }
 
 .producers-list {
@@ -1278,7 +1271,6 @@ h2 {
 .services-slider {
   position: relative;
   width: 940px;
-  height: 284px;
   background-color: transparent;
 }
 
@@ -1286,6 +1278,7 @@ h2 {
   position: relative;
   float: left;
   width: 240px;
+  margin-bottom: 102px;
 }
 
 .services-slider-controls:after {
@@ -1335,8 +1328,8 @@ h2 {
 
 .services-slide {
   display: none;
-  width: 640px;
-  height: 284px;
+  width: 620px;
+  min-height: 284px;
   overflow: hidden;
   background-color: transparent;
 }
