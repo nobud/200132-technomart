@@ -41,8 +41,8 @@ body {
   speak: none;
 }
 
-.icon-left::before { content: "\3c"; } /* "&lt;" */
-.icon-right::before { content: "\3e"; } /* "&gt;" */
+.icon-left::before { content: "\3c"; } /* "<" */
+.icon-right::before { content: "\3e"; } /* ">" */
 .icon-basket::before { content: "\62"; } /* "b" */
 .icon-facebook::before { content: "\66"; } /* "f" */
 .icon-twitter::before { content: "\74"; } /* "t" */
@@ -597,7 +597,8 @@ h2 {
   position: absolute;
   bottom: 22px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   margin-left: 5px;
   z-index: 20;
   font-size: 0;
@@ -635,13 +636,15 @@ h2 {
 
 .promo-slider .left {
   left: 30px;
-  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
   cursor: pointer;
 }
 
 .promo-slider .right {
   right: 26px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   cursor: pointer;
 }
 
@@ -1097,10 +1100,13 @@ h2 {
 
 .product .buy:hover {
   background-color: #5fbb2d;
+  border: 3px solid #5fbb2d;
+  border-bottom-color: #367315;
 }
 
 .product .buy:active {
   background-color: #518534;
+  border: 3px solid #518534;
 }
 
 .product .bookmark:hover {
@@ -1228,7 +1234,8 @@ h2 {
   max-width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .producer:active {
@@ -1785,10 +1792,6 @@ h2 {
   cursor: pointer;
 }
 
-.js .link-filter {
-  display: none;
-}
-
 .catalog-info {
   border-bottom: 1px solid transparent;
   background-color: #f2f6f8;
@@ -2020,7 +2023,8 @@ h2 {
   line-height: 11px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .social-btn-vk:before {
@@ -2048,13 +2052,13 @@ h2 {
 
 .message-info-add-card,
 .form-write-us {
-  display: none;
   box-sizing: border-box;
   position: fixed;
   z-index: 30;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 620px;
   color: #000000;
   background-color: #ffffff;
@@ -2062,7 +2066,12 @@ h2 {
   border-top: 7px solid #ee3643;
 }
 
+.form-write-us {
+  top: -10000px;
+}
+
 .message-info-add-card {
+  display: none;
   padding-top: 46px;
 }
 
@@ -2141,6 +2150,12 @@ h2 {
   opacity: 1;
 }
 
+.form-write-us input:-ms-input-placeholder,
+.form-write-us textarea:-ms-input-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
 .btn-close {
   position: absolute;
   top: 8px;
@@ -2167,11 +2182,13 @@ h2 {
 }
 
 .btn-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .btn-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .form-write-us .bottom-part,
@@ -2226,7 +2243,8 @@ h2 {
   z-index: 30;
   top: 34px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   width: 940px;
   height: 446px;
   background-color: #f1efe8;
@@ -2235,44 +2253,73 @@ h2 {
   box-shadow: 0 0 18px 0 rgba(35, 31, 32, 0.5);
 }
 
-.popup-visible {
-  display: block;
+@-webkit-keyframes appearance {
+  0% {
+    top: -2000px;
+  }
+  70% {
+    top: 25%;
+  }
+  90% {
+    top: 55%;
+  }
+  100% {
+    top: 50%;
+  }
 }
 
 @keyframes appearance {
   0% {
-    transform: translate(-50%, -2000px);
+    top: -2000px;
   }
   70% {
-    transform: translate(-50%, 30px);
+    top: 25%;
   }
   90% {
-    transform: translate(-50%, -10px);
+    top: 55%;
   }
   100% {
-    transform: translate(-50%, 0);
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    left: 50%;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    left: 48%;
+  }
+  20%, 40%, 60%, 80% {
+    left: 52%;
   }
 }
 
 @keyframes shake {
   0%, 100% {
-    transform: translate(-50%, -50%);
+    left: 50%;
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translate(-48%, -50%);
+    left: 48%;
   }
   20%, 40%, 60%, 80% {
-    transform: translate(-52%, -50%);
+    left: 52%;
   }
+}
+
+.popup-visible {
+  display: block;
 }
 
 .form-write-us.popup-visible {
-  display: block;
-  animation: appearance 0.6s;
+  top: 50%;
+  -webkit-animation: appearance 0.6s;
+          animation: appearance 0.6s;
 }
 
 .form-write-us.form-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .full-interactive-map iframe {

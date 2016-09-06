@@ -1,16 +1,5 @@
 (function() {
   var ESC_CODE = 27;
-  var html = document.documentElement;
-  html.className = html.className.replace("no-js", "js");
-
-  var filterBlock = document.querySelector('.filter-block');
-  if (filterBlock) {
-    var filterForm = filterBlock.firstElementChild;
-    var btnFilter = document.createElement('button');
-    btnFilter.innerHTML = "ПОКАЗАТЬ"
-    btnFilter.classList.add('btn-filter');
-    filterForm.appendChild(btnFilter);
-  }
 
   var link = document.querySelector('.btn-write-us');
   if (link) {
@@ -25,7 +14,7 @@
     var emailStorage;
     if (localStorage) {
       nameStorage = localStorage.getItem('name');
-      nameStorage = localStorage.getItem('email');
+      emailStorage = localStorage.getItem('email');
     }
 
     var validityFeedBack = function() {
