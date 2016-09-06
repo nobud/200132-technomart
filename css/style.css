@@ -1509,6 +1509,7 @@ h2 {
 }
 
 .map img {
+  display: block;
   width: 100%;
 }
 
@@ -1778,8 +1779,14 @@ h2 {
   line-height: 18px;
   text-transform: uppercase;
   background-color: #ffffff;
+  text-decoration: none;
+  outline: none;
   color: #000000;
   cursor: pointer;
+}
+
+.js .link-filter {
+  display: none;
 }
 
 .catalog-info {
