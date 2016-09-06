@@ -122,7 +122,7 @@
           <div class="popular-product-list">
             <article class="product product-index">
               <div class="actions">
-                <a class="buy" href="#">Купить</a>
+                <a class="buy" name="buy" href="#">Купить</a>
                 <a class="bookmark" href="#">В закладки</a>
               </div>
               <div class="image">
@@ -139,7 +139,7 @@
             </article>
             <article class="product product-index">
               <div class="actions">
-                <a class="buy" href="#">Купить</a>
+                <a class="buy" name="buy" href="#">Купить</a>
                 <a class="bookmark" href="#">В закладки</a>
               </div>
               <div class="image">
@@ -156,7 +156,7 @@
             </article>
             <article class="product product-index">
               <div class="actions">
-                <a class="buy" href="#">Купить</a>
+                <a class="buy" name="buy" href="#">Купить</a>
                 <a class="bookmark" href="#">В закладки</a>
               </div>
               <div class="image">
@@ -173,7 +173,7 @@
             </article>
             <article class="product product-index flag-new">
               <div class="actions">
-                <a class="buy" href="#">Купить</a>
+                <a class="buy" name="buy" href="#">Купить</a>
                 <a class="bookmark" href="#">В закладки</a>
               </div>
               <div class="image">
@@ -275,7 +275,8 @@
         <div class="wrapper clearfix">
           <div class="full-interactive-map">
             <button class="btn-close" type="button" title="Закрыть">Закрыть</button>
-            <div id="yandex-map"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124002!2d30.32089461617105!3d59.93879686904789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1473119069531" allowfullscreen>
+            </iframe>
           </div>
           <div class="company-features">
             <h2 class="company-features-title">Компания «Техномарт»</h2>
@@ -297,9 +298,7 @@
               заехав в наш офис:
             </p>
             <div class="map">
-              <a href="http://maps.yandex.ru">
-                <img src="img/map.jpg" width="300" height="158" alt="положение магазина на карте">
-              </a>
+              <img src="img/map.jpg" width="300" height="158" alt="положение магазина на карте">
             </div>
             <a class="btn btn-write-us" href="#">Заблудились? Напишите нам!</a>
           </div>
@@ -365,21 +364,34 @@
           <button class="btn-close" type="button" title="Закрыть">Закрыть</button>
           <div class="row clearfix">
             <div class="column">
-              <label for="date">Ваше имя:</label>
-              <input id="date" type="text" name="date" value="" placeholder="Представьтесь, пожалуйста">
+              <label for="name">Ваше имя:</label>
+              <input id="name" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста" required>
             </div>
             <div class="column">
               <label for="email">Ваш e-mail:</label>
-              <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа">
+              <input id="email" type="email" name="email" value="" placeholder="Для отправки ответа" required>
             </div>
           </div>
           <label for="text">Текст письма:</label>
-          <textarea id="text" name="text" placeholder="В свободной форме" rows="5"></textarea>
+          <textarea id="text" name="text" placeholder="В свободной форме" rows="5" required></textarea>
         </div>
         <div class="bottom-part">
           <button class="btn btn-write-us" type="submit">Отправить</button>
         </div>
       </form>
     </div>
+    <div class="message-info-add-card">
+      <button class="btn-close" type="button" title="Закрыть">Закрыть</button>
+      <p class="information-message">
+        Товар добавлен в козину!
+      </p>
+      <div class="bottom-part">
+        <a class="btn btn-to-order" href="#">Оформить заказ</a>
+        <a class="btn btn-back-catalog" href="#">Продолжить покупки</a>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+    <script src="js/popup-index.js"></script>
+    <script src="js/message-form.js"></script>
   </body>
 </html>
